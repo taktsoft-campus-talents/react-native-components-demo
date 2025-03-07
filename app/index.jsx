@@ -1,6 +1,7 @@
-import { Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { Link } from "expo-router";
 import { StyledText } from "../components/StyledText.jsx";
+import { StyledButton } from "../components/StyledButton.jsx";
 
 export default function Index() {
   return (
@@ -23,6 +24,15 @@ export default function Index() {
       <Link href={{ pathname: "/contact" }}>
         <StyledText variant="linktext">Go to contact</StyledText>
       </Link>
+
+      <StyledButton
+        onPress={() => console.debug("onPress Event Button A")}
+        title="My Button A"
+      />
+      <StyledButton
+        onPress={() => console.debug("onPress Event Button B")}
+        title="My Button B"
+      />
     </View>
   );
 }
